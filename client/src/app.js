@@ -150,7 +150,6 @@ const LoginView = {
     <div class="login-container">
       <div class="login-card">
         <h1>ビジネスマッチングアプリ</h1>
-        <h2>ログイン</h2>
         <div class="form-group">
           <label for="username">ユーザー名</label>
           <input 
@@ -569,7 +568,7 @@ const appStyles = `
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     text-align: center;
   }
   
