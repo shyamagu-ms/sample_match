@@ -10,8 +10,27 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "test": "jest",
     "test:unit": "jest tests/unit",
+    "test:unit:coverage": "jest tests/unit --coverage --collectCoverageFrom='server/models/**/*.js'",
     "test:integration": "jest tests/integration",
-    "test:ui": "jest tests/ui"
+    "test:ui": "jest tests/ui",
+    "test:coverage": "jest --coverage --collectCoverageFrom='server/models/**/*.js'"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "coverageReporters": ["text", "html", "lcov", "json"],
+    "collectCoverageFrom": [
+      "server/models/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "author": "",
   "license": "ISC",
